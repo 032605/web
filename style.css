@@ -29,6 +29,7 @@ a {
 }
 
 
+
 .header ul{
     display: flex;
 }
@@ -44,16 +45,28 @@ a {
 
 .menu ul {
     display: flex;
+    justify-content: space-evenly;
+    margin: 10px;
 }
-
-.menu ul li {
-    margin: 3px;
-}
-
 
 /* 배너 */
 
 .banner {
     border: 1px solid #ccc;
     height: 180px;
+}
+
+
+.bbs-box{
+    display: flex;
+}
+
+.bbs-box .left_box {
+    border: 1px solid red;
+    height: 80px;
+}
+
+.bbs-box .right_box {
+    border: 1px solid red;
+    height: 80px;
 }
