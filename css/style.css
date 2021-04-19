@@ -23,6 +23,7 @@ a {
 img{
 max-width: 100%;
 width:0 auto;
+height: auto;
 }
 
 .header {
@@ -49,7 +50,7 @@ width:0 auto;
 .menu ul {
     display: flex;
     justify-content: space-evenly;
-    margin: 12px;
+    margin: 20px;
 }
 
 .menu ul li :hover{
@@ -70,7 +71,7 @@ width:0 auto;
 .bbs-box {overflow:hidden; max-width:1200px; margin:0 auto;}
 .board-box {
     float: left;
-    width: 40%;
+    width: 50%;
 }
 .bbs-box .board-box > div {
     padding: 10px;
@@ -78,7 +79,7 @@ width:0 auto;
 
 .right-banner {
     float: right;
-    width: 60%;
+    width: 50%;
 }
 
 .bbs-box .right-banner .r-slide {
@@ -160,4 +161,39 @@ width:0 auto;
 
 .footer span{
     font-size: 12px;
+}
+
+.signin-conatiner{
+    text-align: center;
+    margin:0 auto; 
+    margin-top: 50px;
+}
+.login-form {
+    width: 300px;
+    background-color: #EEEFF1;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    border: none;
+    border-radius: 6px;
+}
+
+.text-field {
+      font-size: 16px;
+      padding: 10px;
+      border: none;
+      width: 260px;
+      margin-bottom: 20px;
+}
+ 
+.submit-btn {
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  width: 260px;
+  background-color: rgb(255, 161, 53);
+  margin-bottom: 30px;
+  color: white;
+  font-weight: bold;
 }
