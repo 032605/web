@@ -1,0 +1,163 @@
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+ul, li, dl, dt, dd{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+img{
+max-width: 100%;
+width:0 auto;
+}
+
+.header {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 161, 53);
+}
+
+.header ul{
+    display: flex;
+}
+
+.top_btn ul li a {
+    margin: 4px;
+    padding: 5px;
+    color: white;
+}
+
+
+/* 메뉴 */
+
+.menu ul {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 12px;
+}
+
+.menu ul li :hover{
+    background-color: rgb(255, 161, 53);
+    color: white;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+/* 슬라이드 메인 배너 */
+.swiper-container {
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 게시판 및 슬라이더 */
+.bbs-box {overflow:hidden; max-width:1200px; margin:0 auto;}
+.board-box {
+    float: left;
+    width: 40%;
+}
+.bbs-box .board-box > div {
+    padding: 10px;
+}
+
+.right-banner {
+    float: right;
+    width: 60%;
+}
+
+.bbs-box .right-banner .r-slide {
+    padding: 10px;
+}
+
+/* 게시판 */
+.tap-menu ul{
+    overflow: hidden;
+    text-align: center;
+}
+
+.tap-menu ul li{
+    float: left;
+    width: 33.33%;
+}
+
+.tap-menu ul li a{
+    display: block;
+    padding: 5px 10px;
+    border-bottom: 1px solid #e1e1e1;
+    background-color: #fff3eb;
+    font-size: 18px;
+}
+
+.tap-menu ul li.on a{
+    color: rgb(255, 161, 53);
+    font-weight: bold;
+    border-bottom: 1px solid rgb(255, 161, 53);
+}
+
+.tap-menu ul li :hover{
+    color: rgb(255, 161, 53);
+}
+
+.tap-con ul li {
+    overflow: hidden;
+}
+.tap-con ul li a {
+    float: left;
+    display: block;
+    padding: 5px;
+}
+
+.tap-con ul li a ::before{
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    background-color: #ccc;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.tap-con ul li span{
+    float: right;
+    padding: 5px;
+    font-size: 13px;
+    color: #888;
+}
+
+/* 푸터 */
+.footer{
+    background-color: rgb(255, 161, 53);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+}
+
+.footer h1{
+    font-size: 20px;
+}
+
+.footer p{
+    font-size: 13px;
+    line-height: 160%;
+}
+
+.footer span{
+    font-size: 12px;
+}

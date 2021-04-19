@@ -6,13 +6,20 @@
   <meta name="Author" content="">
   <meta name="Keywords" content="">
   <meta name="Description" content="">
-  <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="./css/style.css">
       <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap"
       rel="stylesheet"/>
+      <script src="./js/jquery-1.12.4.min.js"></script>
+      <script src="./js/jquery-ui.min.js"></script>
+      <script src="./js/swiper.min.js"></script>
+      
+      <link rel="stylesheet" href="./js/swiper.min.css">
+      <!-- Swiper JS -->
+      <script src="../package/swiper-bundle.min.js"></script>
+      
   <title>Document</title>
- </head>
- 
+</head>
  <body>
    <!--상단 헤더 -->
    <div class="header">
@@ -36,32 +43,103 @@
       </ul>
    </div>
 
-  <!--상단 배너 -->
-  <div class="banner"> </div>
-   <!--메인 게시물 박스 -->
-  <div class="bbs-box"></div>
+    <!--상단배너-->
+      <!-- Swiper -->
+      <div class="swiper-container">
+       <div class="swiper-wrapper">
+         <div class="swiper-slide"><img src="./img/pizza.png" width="100%"></div>
+         <div class="swiper-slide"><img src="./img/banner01.jpg" width="100%"></div>
+         <div class="swiper-slide"><img src="./img/pizza.png" width="100%"></div>
+         <div class="swiper-slide"><img src="./img/banner01.jpg" width="100%"></div>
+       </div>
+      <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+      <!-- 실행 Initialize Swiper -->
+      <script>
+        var swiper = new Swiper('.swiper-container', {
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable : true,
+          },
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+          },
+        });
+      </script>
 
-<div class="left_box">
-  <dl>
-   <dt>공지사항</dt>
-   <dd>
-      첫번째 탭메뉴 내용은 여기
-   </dd>
+<!--메인 게시물 박스 -->
+  <div class="bbs-box">
+    <div class="board-box">
+      <div class="tap-menu">
+        <ul>
+          <li class="on"><a href="#">공지사항</a></li>
+          <li><a href="#">자유게시판</a></li>
+          <li><a href="#">갤러리</a></li>
+        </ul>
+      </div> 
+      <div class="tap-con">
+        <ul>
+          <li><a href="#">공지사합 입니다...</a><span>2021.04.19</span></li>
+          <li><a href="#">공지사합 입니다...</a><span>2021.04.19</span></li>
+          <li><a href="#">공지사합 입니다...</a><span>2021.04.19</span></li>
+          <li><a href="#">공지사합 입니다...</a><span>2021.04.19</span></li>
+        </ul>
+      </div>
+    </div>
 
-   <dt>자유게시판</dt>
-   <dd class="hidden">
-      두번째 탭메뉴 내용은 여기
-   </dd>
-   <dt>갤러리</dt>
-      <dd class="hidden">
-      두번째 탭메뉴 내용은 여기
-   </dd>
-</dl>
-</div>
+    <div class="right-banner">
+        <div class="swiper-container r-slide">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="./img/banner01.jpg"></div>
+            <div class="swiper-slide"><img src="./img/banner01.jpg"></div>
+            <div class="swiper-slide"><img src="./img/banner01.jpg"></div>
+            <div class="swiper-slide"><img src="./img/banner01.jpg"></div>
+          </div>
+        <!-- Add Arrows -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+        <!-- 실행 Initialize Swiper -->
+        <script>
+          var swiper = new Swiper('.r-slide', {
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+              el: '.swiper-pagination',
+              clickable : true,
+            },
+            autoplay: {
+              delay: 2500,
+              disableOnInteraction: false,
+            },
+          });
+        </script>
+      </div>
+    </div>
 
-<div class="right_box"></div>
-   <!--하단 정보 -->
-   <div class="footer"></div>
+<!--하단 정보 -->
+   <div class="footer">
+      <a href="#"><img src="https://globalsymbols.com/uploads/production/image/imagefile/5353/13_5353_c893595f-9bfd-4e5b-aa50-660b0a402ea2.svg" width="80px"></a>
+       <h1>Pizzzzza!</h1>
+       <p>주소 : 대구 동구 3D 융합센터</p>
+       <p>대표자 : 김나현</p>
+       <p>이메일 : pizzagajowa@naver.com</p>
+       <p>연락처 : 010-8282-5353</p>
+       <span>copyright(c) Light. All rights reserved.</span>
+   </div>
 
- </body>
+</body>
 </html>
