@@ -78,7 +78,7 @@ height: auto;
     position: absolute;
     z-index: 9;
     background-color: #fff;
-    border: 2px solid rgb(255, 161, 53);
+    border: 3px solid rgb(255, 161, 53);
     padding: 10px;
     display: none;
 
@@ -92,8 +92,12 @@ height: auto;
     margin: 5px;
     padding: 20px;
     font-size: 18px;
-    color: rgb(255, 161, 53);
+    color: rgb(0, 0, 0);
     font-weight: 100;
+}
+
+.menu > ul > li ul.submenu a:hover {
+    color: rgb(255, 161, 53);
 }
 
 /* 슬라이드 메인 배너 */
@@ -360,3 +364,12 @@ input[id="check-notice"] {
 .bbs-btn-box a.list{background-color: white; color: rgb(255, 161, 53); border: 2px solid rgb(255, 161, 53);}
 .bbs-btn-box a.del{background-color: 255, 161, 53; border: 2px solid rgb(255, 161, 53)}
 .bbs-btn-box a.mod{background-color: 255, 161, 53; border: 2px solid rgb(255, 161, 53)}
+
+/*갤러리 */
+
+.gallery-table > ul {overflow: hidden; display: flex; flex-wrap: wrap}
+.gallery-table > ul > li {width: 25%; margin-bottom: 20px;}
+.gallery-table > ul > li > div {padding: 10px;}
+.gallery-table .thum{overflow: hidden; padding-bottom: 0px;}
+.gallery-table .info a{display: block; font-size: 15px;}
+.gallery-table .info span {color: #888; }
