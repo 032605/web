@@ -18,7 +18,7 @@
       <!-- Swiper JS -->
       <script src="../package/swiper-bundle.min.js"></script>
       
-  <title>sign in</title>
+  <title>마이페이지</title>
 </head>
  <body>
     <!--상단 헤더 -->
@@ -38,13 +38,13 @@
         </li>
         <li><a href="#">게시판</a>
           <ul class="submenu">
-            <li><a href="./board.html">공지사항</a></li>
-            <li><a href="./anything.html">자유게시판</a></li>
-            <li><a href="./gallery.html">갤러리</a></li>
+            <li><a href="../board/board.html">공지사항</a></li>
+            <li><a href="../board/anything.html">자유게시판</a></li>
+            <li><a href="../board/gallery.html">갤러리</a></li>
           </ul>
         </li>
         <li><a href="../booking/list.html">장소 예약</a></li>
-        <li><a href="../member/mypage.html">My Page</a></li>
+        <li><a href="./mypage.html">My Page</a></li>
     </ul>
  </div>
     <!--body-->
@@ -52,19 +52,20 @@
     <div class="content">
     <div class="notice-wrap">
         <div class="notice-box">
-            <h1>공지사항</h1>
+            <h1>마이페이지</h1>
 
             <div class="serch-box">
                 <input type="text">
                 <button>검색</button>
             </div>
 
-            <div class="notice-table">
+            <div class="mypage-table">
                 <ul class="table-hd">
                     <li>
                         <div class="no">번호</div>
-                        <div class="subject">제목</div>
-                        <div class="name">글쓴이</div>
+                        <div class="location">장소명</div>
+                        <div class="status">상태</div>
+                        <div class="booking-date">예약일</div>
                         <div class="date">등록일</div>
                     </li>
                 </ul>
@@ -72,20 +73,23 @@
                 <ul class="table-bd">
                     <li>
                         <div class="no">3</div>
-                        <div class="subject"><a href="">공지사항 입니다.</a></div>
-                        <div class="name">admin</div>
+                        <div class="location"><a href="">생일 축하 파티</a></div>
+                        <div class="status_waiting">승인대기</div>
+                        <div class="booking-date">2021.04.25</div>
                         <div class="date">2021.04.20</div>
                     </li>
                     <li>
                         <div class="no">2</div>
-                        <div class="subject"><a href="#">진채은어깨피자 추천</a></div>
-                        <div class="name">admin</div>
+                        <div class="location"><a href="#">파자마 파티</a></div>
+                        <div class="status_ok">승인</div>
+                        <div class="booking-date">2021.04.22</div>
                         <div class="date">2021.04.20</div>
                     </li>
                     <li>
                         <div class="no">1</div>
-                        <div class="subject"><a href="./board_view.html">파쿠피자...</a></div>
-                        <div class="name">조은지</div>
+                        <div class="location"><a href="./board_view.html">파쿠피자...</a></div>
+                        <div class="status_dismiss">반려</div>
+                        <div class="booking-date">2021.04.21</div>
                         <div class="date">2021.04.20</div>
                     </li>
                 </ul>
@@ -105,9 +109,7 @@
         </ul>
     </div>
 
-    <div class="bbs-btn-box">
-        <a href="./board_post.html">글쓰기</a>
-    </div>
+
     </div>
 
     <!--하단 정보 -->

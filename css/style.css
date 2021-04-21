@@ -35,6 +35,8 @@ height: auto;
     background-color: rgb(255, 161, 53);
 }
 
+.header .logo{margin-left: 4px;}
+
 .header ul{
     display: flex;
 }
@@ -253,25 +255,27 @@ height: auto;
 .notice-box h1{
     text-align: center;
     margin-bottom: 10px;
-    margin: 30px 0;
+    margin: 60px 0;
 }
 
 .serch-box {
     align-items: center;
     text-align: right;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 .serch-box input{
-    border: 2px solid #ccc;
-    height: 18px;
+    border: 1.5px solid rgb(255, 161, 53);
+    height: 24px;
     vertical-align: middle;
 }
 .serch-box button {
     background-color: #fff;
     color: rgb(255, 161, 53);
-    border: 2px solid rgb(255, 161, 53);
+    border: 1.5px solid rgb(255, 161, 53);
     font-weight: bold;
     vertical-align: middle;
+    font-size: 16px;
+    padding: 3px 8px;
 }
 
 .notice-table {background-color: #fff;}
@@ -373,8 +377,11 @@ input[id="check-notice"] {
 .gallery-table > ul > li {width: 25%; margin-bottom: 20px;}
 .gallery-table > ul > li > div {padding: 10px;}
 .gallery-table .thum{height: 300px; overflow: hidden; padding-bottom: 0px; box-shadow: 0px 1px 10px 2px rgb(233, 233, 233); margin: 8px;}
+.gallery-table .thum img{height: 300px;}
+.gallery-table .info{text-align: center;}
 .gallery-table .info a{display: block; font-size: 15px;}
 .gallery-table .info span {color: #888; }
+.gallery-table .table-bd li:hover .info a{font-weight: bold; text-decoration: underline; color: rgb(255, 161, 53); }
 
 /* 장소예약 */
 
@@ -387,30 +394,85 @@ input[id="check-notice"] {
 .booking-table .thum img{max-height: 220px; border: 1px solid #ccc;}
 
 .booking-table .info{width: 85%;}
-.booking-table .info a{font-size: 17px; font-weight: bold;}
-.booking-table .info a:hover{text-decoration: underline; color: rgb(0, 0, 0); font-weight: bold;}
+.booking-table .info a{font-size: 17px;}
 .booking-table .info p{font-size: 15px;}
 .booking-table .info span {color: #888; }
+.booking-table .table-bd li:hover .info a{font-weight: bold; text-decoration: underline; color: rgb(255, 161, 53); font-weight: bold;}
 
 
 /* 장소예약 상세 뷰 */
 
-.booking-view > div{border: 1px solid red; padding: 20px;}
-.booking-view .photo-box > div {border:  1px solid orange; padding: 20px;}
+.booking-view{margin-bottom: 30px;}
+.booking-view .photo-box > div {padding: 20px;}
 .booking-view .photo-box {overflow:hidden; display: flex;}
 
-.booking-view .photo-box .view-banner {width: 50%;}
-.booking-view .photo-box .calendar {width: 50%;}
+.booking-view .photo-box{overflow: hidden;}
+.booking-view .photo-box .view-banner {width: 45%; padding: 5px; height: 400px;}
+.booking-view .photo-box .calendar {width: 55%; padding: 5px; height: 400px;}
 
 .cal-box ul {overflow: hidden; padding: 5px;}
 .cal-box ul li{float: left; width: 14.28%; text-align: center;}
+
 .cal-box ul li:first-child a span{color: #ff4c4c;}
 .cal-box ul li:last-child a span{color: #13b2f7;}
 
+
+.cal-box ul li a{display: block; padding: 3px 5px; margin-bottom: 8px;}
 .cal-box ul li span.off{color: #aaa;}
-.cal-box ul li a span.today{color: #fff; background-color:rgb(255, 161, 53); padding: 5px;}
+.cal-box ul li a span.today{color: #fff; background-color:rgb(255, 161, 53); padding: 8px;}
 .cal-box ul li a span.selected{color: #fff; background-color: #000; padding: 5px;}
 .cal-box ul li a span:hover{color: #fff; background: #000; padding: 8px;}
 
-.calendar .cal-hd {text-align: center; margin: 10px;}
-.calendar .cal-hd .month{margin: 12px; font-size: 18px; font-weight: bold;}
+.calendar .cal-hd {text-align: center; margin: 30px;}
+.calendar .cal-hd span {padding: 10px;}
+.calendar .cal-hd .month{margin: 12px; font-size: 24px; font-weight: bold;}
+.calendar .cal-box{box-shadow: 0px 1px 10px 2px rgb(233, 233, 233);}
+
+
+
+/* 예약 버튼 */
+
+.view-btn{text-align: right; padding: 5px; margin-bottom: 7px;}
+.view-btn a{display: inline-block; padding: 5px 10px; background:#fff; color: rgb(255, 161, 53); border: 2px solid rgb(255, 161, 53);}
+.view-btn a:hover{background-color: rgb(255, 161, 53);color: #fff;}
+
+.view-detail{background: rgba(252, 252, 252, 0.699); border: 1px solid #ccc; height: 250px; padding: 15px;}
+
+/* 마이페이지 */
+.mypage-table {background-color: #fff;}
+
+.mypage-table ul.table-hd{
+    text-align: center;
+    border-top: 2px solid #000;
+}
+
+.mypage-table ul.table-bd{
+    text-align: center;
+}
+
+.mypage-table ul.table-bd .subject{
+    text-align: left;
+}
+
+.mypage-table ul li {
+    display: table;
+    width: 100%;
+}
+
+.mypage-table ul li > div{
+    display: table-cell;
+    border-bottom: 1px solid rgb(121, 121, 121);
+    padding: 10px;
+}
+
+.mypage-table ul li > div.no {width: 10%;}
+.mypage-table ul li > div.location {width: 30%;}
+.mypage-table ul li > div.location a{font-weight: bold; font-size: 18px;}
+.mypage-table ul li > div.location a:hover{text-decoration: underline; color: rgb(255, 161, 53);}
+.mypage-table ul li > div.status {width: 20%;}
+.mypage-table ul li > div.booking-date {width: 20%;}
+.mypage-table ul li > div.date {width: 20%;}
+
+.mypage-table ul li >div.status_dismiss{color: #ff4c4c;}
+.mypage-table ul li >div.status_ok{color: #13b2f7;}
+.mypage-table ul li >div.status_waiting{color: rgb(255, 161, 53);}
