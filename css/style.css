@@ -18,7 +18,7 @@ ul, li, dl, dt, dd{
 }
 a {
     text-decoration: none;
-    color: #000;
+    color: rgb(50, 50, 50);
 }
 
 img{
@@ -59,7 +59,6 @@ height: auto;
     text-align: center;
     display: flex;
     justify-content: center;
-    align-item: center;
     justify-content: space-evenly;
 }
 
@@ -113,9 +112,8 @@ height: auto;
 .board-box {
     float: left;
     width: 50%;
-}
-.bbs-box .board-box > div {
-    padding: 10px;
+    margin-top: 20px;
+    box-shadow: 0px 1px 10px 0px rgb(202, 202, 202);
 }
 
 .right-banner {
@@ -140,21 +138,23 @@ height: auto;
 
 .tap-menu ul li a{
     display: block;
-    padding: 5px 10px;
+    padding: 10px 10px;
     border-bottom: 1px solid #e1e1e1;
-    background-color: #fff3eb;
+    background-color: #ffffff;
     font-size: 18px;
 }
 
 .tap-menu ul li.on a{
     color: rgb(255, 161, 53);
     font-weight: bold;
-    border-bottom: 1px solid rgb(255, 161, 53);
+    border-bottom: 2px solid rgb(255, 161, 53);
 }
 
 .tap-menu ul li :hover{
     color: rgb(255, 161, 53);
 }
+
+/* tap - content */
 
 .tap-con ul li {
     padding: 0px 25px;
@@ -163,12 +163,12 @@ height: auto;
 .tap-con ul li a {
     float: left;
     display: block;
-    padding: 5px;
+    padding: 0px;
 }
 
 .tap-con ul li a:hover{text-decoration: underline; color: rgb(0, 0, 0); font-weight: bold;}
 
-.tap-con ul li a ::before{
+.tap-con ul li a::before{
     content: "";
     display: inline-block;
     width: 3px;
@@ -178,7 +178,7 @@ height: auto;
     -moz-border-radius: 50%;
     border-radius: 50%;
     vertical-align: middle;
-    margin-right: 5px;
+    margin-right: 10px;
 }
 .tap-con ul li span{
     float: right;
@@ -226,14 +226,14 @@ height: auto;
 .join-box .join-form label{display: block;}
 .join-box h1{text-align: center; margin-bottom: 20px;}
 
-.join-box .join-form {max-width: 400px; margin: 0 auto; border: 1px solid #e1e1e1; border-radius: 25px; padding: 20px; background-color: #fff; box-shadow: 0px 0px 10px 0px rgba(88, 88, 88, 0.616);}
+.join-box .join-form {max-width: 600px; margin: 0 auto; border: 1px solid #e1e1e1; border-radius: 25px; padding: 20px; background-color: #fff; box-shadow: 0px 0px 10px 0px rgba(88, 88, 88, 0.616);}
 
 .join-box .join-form input[type="text"]{width: 100%; height: 30px; border: 1px solid #ccc; padding: 5px; border-radius: 6px;}
 .join-box .join-form input[type="password"]{width: 100%; height: 30px; border: 1px solid #ccc; padding: 5px; border-radius: 6px;}
 .join-box .join-form select{width:100%; height: 40px; border: 1px solid #ccc; padding: 5px; border-radius: 6px; font-size: 14px;}
 
 .join-box .join-form ul li{margin: 20px;}
-.join-box .join-form li label{font-size: 12px; color: #000; margin-bottom: 3px;}
+.join-box .join-form li label{font-size: 12px; color: rgb(50, 50, 50); margin-bottom: 3px;}
 .join-box .join-form ul li.gender span{display: inline-block;}
 .join-box .join-form ul li.gender span label{display: inline-block;}
 .join-box .join-form ul li.address span.zipcode input{width: 71%; border-radius: 6px 0 0 6px; vertical-align: middle;}
@@ -282,7 +282,7 @@ height: auto;
 
 .notice-table ul.table-hd{
     text-align: center;
-    border-top: 2px solid #000;
+    border-top: 2px solid rgb(255, 161, 53);
 }
 
 .notice-table ul.table-bd{
@@ -300,7 +300,7 @@ height: auto;
 
 .notice-table ul li > div{
     display: table-cell;
-    border-bottom: 1px solid rgb(121, 121, 121);
+    border-bottom: 1px solid rgb(241, 185, 121);
     padding: 10px;
 }
 
@@ -318,8 +318,8 @@ height: auto;
 
 .paging ul {text-align: center; margin: 20px; margin-bottom: 30px;}
 .paging ul li {display: inline-block; margin: 5px 0px;}
-.paging ul li a{display: block; padding: 5px 10px; border: 2px solid rgb(255, 161, 53); background-color: #fff; color: rgb(32, 22, 11);}
-.paging ul li.on a{background-color: rgb(255, 161, 53); color: #fff; border: 2px solid rgb(255, 161, 53);} 
+.paging ul li a{display: block; padding: 5px 10px; border: 1.5px solid rgb(255, 161, 53); background-color: #fff; color: rgb(32, 22, 11);}
+.paging ul li.on a{background-color: rgb(255, 161, 53); color: #fff; border: 1.5px solid rgb(255, 161, 53);} 
 
 
 .bbs-btn-box{
@@ -330,14 +330,20 @@ height: auto;
 .bbs-btn-box a{
     display: inline-block;
     background-color: rgb(255, 161, 53);
-    color: white;
+    color: #fff;
     padding: 5px 10px;
+    border: 1.5px solid rgb(255, 161, 53);
 }
 
+.bbs-btn-box .back{
+    background-color: #fff;
+    color: rgb(255, 161, 53);
+    border: 1.5px solid rgb(255, 161, 53);
+}
 /* 게시판 작성 */
 
 .write-form {
-    max-width: 1200px; margin: 0 auto; border-radius: 25px; box-shadow: 0px 0px 10px 0px rgba(88, 88, 88, 0.616); padding: 30px;}
+    max-width: 800px; margin: 0 auto; border-radius: 25px; box-shadow: 0px 0px 10px 0px rgba(88, 88, 88, 0.616); padding: 30px;}
 
 .write-form ul li{margin: 10px;}
 .write-form ul li label{margin-bottom: 12px; font-size: 16px; vertical-align: middle;}
@@ -406,7 +412,6 @@ input[id="check-notice"] {
 .booking-view .photo-box > div {padding: 20px;}
 .booking-view .photo-box {overflow:hidden; display: flex;}
 
-.booking-view .photo-box{overflow: hidden;}
 .booking-view .photo-box .view-banner {width: 45%; padding: 5px; height: 400px;}
 .booking-view .photo-box .calendar {width: 55%; padding: 5px; height: 400px;}
 
@@ -420,13 +425,13 @@ input[id="check-notice"] {
 .cal-box ul li a{display: block; padding: 3px 5px; margin-bottom: 8px;}
 .cal-box ul li span.off{color: #aaa;}
 .cal-box ul li a span.today{color: #fff; background-color:rgb(255, 161, 53); padding: 8px;}
-.cal-box ul li a span.selected{color: #fff; background-color: #000; padding: 5px;}
-.cal-box ul li a span:hover{color: #fff; background: #000; padding: 8px;}
+.cal-box ul li a span.selected{color: #fff; background-color: rgb(50, 50, 50);; padding: 5px;}
+.cal-box ul li a span:hover{color: #fff; background: rgb(50, 50, 50);; padding: 8px;}
 
 .calendar .cal-hd {text-align: center; margin: 30px;}
 .calendar .cal-hd span {padding: 10px;}
 .calendar .cal-hd .month{margin: 12px; font-size: 24px; font-weight: bold;}
-.calendar .cal-box{box-shadow: 0px 1px 10px 2px rgb(233, 233, 233);}
+.calendar .cal-box{}
 
 
 
@@ -443,7 +448,7 @@ input[id="check-notice"] {
 
 .mypage-table ul.table-hd{
     text-align: center;
-    border-top: 2px solid #000;
+    border-top: 2px solid rgb(255, 161, 53);;
 }
 
 .mypage-table ul.table-bd{
@@ -461,18 +466,131 @@ input[id="check-notice"] {
 
 .mypage-table ul li > div{
     display: table-cell;
-    border-bottom: 1px solid rgb(121, 121, 121);
+    border-bottom: 1px solid rgb(241, 185, 121);
     padding: 10px;
 }
 
 .mypage-table ul li > div.no {width: 10%;}
 .mypage-table ul li > div.location {width: 30%;}
+.table-bd .location {text-align: left;}
 .mypage-table ul li > div.location a{font-weight: bold; font-size: 18px;}
 .mypage-table ul li > div.location a:hover{text-decoration: underline; color: rgb(255, 161, 53);}
 .mypage-table ul li > div.status {width: 20%;}
 .mypage-table ul li > div.booking-date {width: 20%;}
 .mypage-table ul li > div.date {width: 20%;}
 
-.mypage-table ul li >div.status_dismiss{color: #ff4c4c;}
+.mypage-table ul li >div.status_dismiss{color: #ff4c4c; text-decoration: line-through;}
 .mypage-table ul li >div.status_ok{color: #13b2f7;}
 .mypage-table ul li >div.status_waiting{color: rgb(255, 161, 53);}
+
+
+/* admin - 메뉴 */
+.adm-menu{box-shadow: 0px 1px 10px 0px rgb(202, 202, 202); padding: 15px;}
+.adm-menu ul{text-align: center;}
+.adm-menu ul li{display: inline-block; margin: 5px; border: 0px solid red;}
+.adm-menu ul li:before{content: ""; display: inline-block; width: 1px; height: 10px; background: rgb(50, 50, 50); margin-right: 15px;}
+.adm-menu ul li:last-child:after{content: ""; display: inline-block; width: 1px; height: 10px; background: rgb(50, 50, 50); margin-left: 15px;}
+/* .adm-menu ul li:first-child:after{content: ""; display: none; } */
+.adm-menu ul li a{display: inline-block; padding: 5px 10px; background: #fff; color: rgb(50, 50, 50);}
+.adm-menu ul li a:hover{color: rgb(255, 161, 53); font-weight: bold;}
+.adm-menu ul li.on a{color: rgb(255, 161, 53); font-weight: bold;}
+
+
+
+/* admin - 환경설정 */
+
+.admin-set{padding: 50px;}
+.admin-set .join-form label{display: block;}
+.admin-set h1{text-align: center; margin-bottom: 20px;}
+
+.admin-set .join-form {max-width: 600px; margin: 0 auto; border: 1px solid #e1e1e1; border-radius: 25px; padding: 20px; background-color: #fff; box-shadow: 0px 0px 10px 0px rgba(88, 88, 88, 0.616);}
+.admin-set .join-form input{width: 100%; height: 30px; border: 1px solid #ccc; padding: 5px; border-radius: 6px;}
+
+.admin-set .join-form ul li{margin: 20px;}
+.admin-set .join-form li label{font-size: 12px; color: rgb(50, 50, 50); margin-bottom: 3px;}
+.admin-set .join-form ul li.address span.zipcode input{width: 71%; border-radius: 6px 0 0 6px; vertical-align: middle;}
+.admin-set .join-form ul li.address span.zipcode button{width: 25%; height: 42px; background-color: rgb(255, 161, 53); color: white; border: 0; border-radius: 0 6px 6px 0;  font-weight: bold; vertical-align: middle;}
+.admin-set .join-form ul li.address span{margin-bottom: 5px; display: block;}
+
+.admin-set .save-btn {text-align: center; margin-top: 40px;}
+.admin-set .save-btn a {padding: 8px 80px; color: rgb(255, 161, 53); background-color: white; border: 0; border: 2px solid rgb(255, 161, 53); border-radius: 25px; font-weight:550; font-size: 16px;}
+.admin-set .save-btn a:hover{color: white; background-color: rgb(255, 161, 53); }
+
+
+/* admin - borad */ 
+
+.amd-content{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.amd-borad-box h1{
+    text-align: center;
+    margin-bottom: 10px;
+    margin: 60px 0;
+}
+
+.mypage-table ul li > div.no {width: 10%;}
+.mypage-table ul li > div.board_name {width: 30%;}
+.mypage-table ul li > div.board_name a{font-weight: bold; font-size: 18px;}
+.mypage-table ul li > div.board_name a:hover{text-decoration: underline; color: rgb(255, 161, 53);}
+.mypage-table ul li > div.board_type {width: 20%;}
+.mypage-table ul li > div.date {width: 20%;}
+.mypage-table ul li > div.manage {width: 20%;}
+.mypage-table ul li > div.manage div {display: inline; text-decoration: underline; margin: 0px 5px;}
+.mypage-table ul li > div.manage a:hover {display: inline;color: rgb(255, 161, 53);}
+
+.write-form > ul > li > select{width:60%; height: 40px; border: 1px solid #ccc; padding: 5px; border-radius: 6px; font-size: 16px;}
+
+
+/* admin - member */
+.mypage-table ul li > div.no {width: 5%;}
+.mypage-table ul li > div.member_name {width: 10%;}
+.mypage-table ul li > div.member_name a{font-weight: bold; font-size: 18px;}
+.mypage-table ul li > div.phone {width: 10%;}
+.mypage-table ul li > div.birth {width: 10%;}
+.mypage-table ul li > div.add {width: 20%;}
+.mypage-table ul li > div.date {width: 10%;}
+.mypage-table ul li > div.manage {width: 10%;}
+
+
+/* admin - popup */
+
+.mypage-table ul li > div.no {width: 5%;}
+.mypage-table ul li > div.popup_name {width: 10%;}
+.mypage-table ul li > div.popup_name a{font-weight: bold; font-size: 18px;}
+.mypage-table ul li > div.duration {width: 10%;}
+.mypage-table ul li > div.use {width: 10%;}
+.mypage-table ul li > div.date {width: 10%;}
+.mypage-table ul li > div.manage {width: 10%;}
+
+/* popup reg */
+.write-form ul li{margin-bottom: 20px;}
+.write-form input[type="text"]{width: 100%; height: 30px; border: 1px solid #ccc; padding: 5px; border-radius: 6px;}
+.write-form ul > li > .duration{display: flex;}
+.write-form ul > li > .duration input{ width: 30%; margin: 5px;}
+
+
+/* admin - banner */
+.mypage-table ul li > div.no {width: 10%;}
+.mypage-table ul li > div.banner_position {width: 10%;}
+.mypage-table ul li > div.banner_name {width: 20%; font-size: 18px;}
+.mypage-table ul.table-bd .banner_name {font-weight: bold;}
+.mypage-table ul li > div.duration {width: 30%;}
+.mypage-table ul li > div.use {width: 10%;}
+.mypage-table ul li > div.date {width: 10%;}
+.mypage-table ul li > div.manage {width: 10%;}
+
+
+/* banner reg */ 
+
+.write-form > ul > li > select{width:60%; height: 40px; border: 1px solid #ccc; padding: 5px; border-radius: 6px; font-size: 16px;}
+
+
+/* admin - booking */ 
+.mypage-table ul li > div.no {width: 5%;}
+.mypage-table ul li > div.booking_location {width: 15%; font-size: 18px;}
+.mypage-table ul.table-bd .booking_location {font-weight: bold;}
+.mypage-table ul li > div.booking_detail {width: 40%;}
+.mypage-table ul li > div.use {width: 10%;}
+.mypage-table ul li > div.date {width: 10%;}
+.mypage-table ul li > div.manage {width: 10%;}

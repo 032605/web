@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+      <link rel="stylesheet" href="../css/style.css">
+      <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap"
+      rel="stylesheet"/>
+      <script src="../js/jquery-1.12.4.min.js"></script>
+      <script src="../js/jquery-ui.min.js"></script>
+      <script src="../js/swiper.min.js"></script>
+      
+      <link rel="stylesheet" href="../css/swiper.min.css">
+      <!-- Swiper JS -->
+      <script src="../package/swiper-bundle.min.js"></script>
+      
+  <title>admin page - 배너 관리</title>
+</head>
+
+ <body>
+    <!--상단 헤더 -->
+    <div class="header">
+        <div class="logo">
+        <h1><a href="../index.html"><img src="https://globalsymbols.com/uploads/production/image/imagefile/5353/13_5353_c893595f-9bfd-4e5b-aa50-660b0a402ea2.svg" width="80px"></a></h1>
+        </div>
+    </div>
+
+    <!-- 관리자 메뉴-->
+    <div class="adm-menu">
+        <ul>
+            <li><a href="./setting.html">환경 설정</a></li>
+            <li><a href="./board.html">게시판 관리</a></li>
+            <li><a href="./member.html">회원 관리</a></li>
+            <li><a href="./popup.html">팝업 관리</a></li>
+            <li><a href="./banner.html">배너 관리</a></li>
+            <li><a href="./booking.html">장소 관리</a></li>
+        </ul>
+
+    </div>
+    <!--body-->
+
+    <div class="content">
+    <div class="notice-wrap">
+        <div class="notice-box">
+            <h1>배너 관리</h1>
+
+            <div class="serch-box">
+                <input type="text">
+                <button>검색</button>
+            </div>
+
+            <div class="mypage-table">
+                <ul class="table-hd">
+                    <li>
+                        <div class="no">번호</div>
+                        <div class="banner_position">위치 구분</div>
+                        <div class="banner_name">배너명</div>
+                        <div class="duration">사용기간</div>
+                        <div class="use">사용여부</div>
+                        <div class="date">등록일</div>
+                        <div class="manage">관리</div>
+                    </li>
+                </ul>
+
+                <ul class="table-bd">
+                    <li>
+                        <div class="no">4</div>
+                        <div class="banner_position"><a href="">상단</a></div>
+                        <div class="banner_name">진채은어깨피자 배너</div>
+                        <div class="banner_duration">2021.04.19-2021.04.30</div>
+                        <div class="use">사용</div>
+                        <div class="date">2021.04.19</div>
+                        <div class="manage">
+                            <div><a href="./banner_regist.html">수정</a></div>
+                            <div><a href="#">삭제</a></div>
+                        </div>
+                    </li>                    
+                    <li>
+                        <div class="no">3</div>
+                        <div class="banner_position"><a href="">상단</a></div>
+                        <div class="banner_name">파쿠피자 배너</div>
+                        <div class="banner_duration">2021.04.19-2021.04.30</div>
+                        <div class="use">사용</div>
+                        <div class="date">2021.04.19</div>
+                        <div class="manage">
+                            <div><a href="./banner_regist.html">수정</a></div>
+                            <div><a href="#">삭제</a></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="no">2</div>
+                        <div class="banner_position"><a href="">하단</a></div>
+                        <div class="banner_name">블루피자 배너</div>
+                        <div class="banner_duration">2021.04.19-2021.04.30</div>
+                        <div class="use">사용</div>
+                        <div class="date">2021.04.19</div>
+                        <div class="manage">
+                            <div><a href="./banner_regist.html">수정</a></div>
+                            <div><a href="#">삭제</a></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="no">1</div>
+                        <div class="banner_position"><a href="">하단</a></div>
+                        <div class="banner_name">신메뉴 배너</div>
+                        <div class="banner_duration">2021.05.19-2021.05.30</div>
+                        <div class="use">미사용</div>
+                        <div class="date">2021.04.19</div>
+                        <div class="manage">
+                            <div><a href="./banner_regist.html">수정</a></div>
+                            <div><a href="#">삭제</a></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="paging">
+        <ul>
+             <li><a href="#">처음으로</a></li>
+            <li><a href="#">이전</a></li>
+            <li class="on"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">다음</a></li>
+            <li><a href="#">마지막</a></li>
+        </ul>
+    </div>
+
+    <div class="bbs-btn-box">
+        <a href="./banner_regist.html">배너 등록</a>
+    </div>
+    </div>
+
+    <!--하단 정보 -->
+   <div class="footer">
+    <a href="#"><img src="https://globalsymbols.com/uploads/production/image/imagefile/5353/13_5353_c893595f-9bfd-4e5b-aa50-660b0a402ea2.svg" width="60px"></a>
+     <h1>Pizzzzza!</h1>
+     <p>주소 : 대구 동구 3D 융합센터</p>
+     <p>대표자 : 김나현</p>
+     <p>이메일 : pizzagajowa@naver.com</p>
+     <p>연락처 : 010-8282-5353</p>
+     <span>copyright(c) Light. All rights reserved.</span>
+ </div>
+
+</body>
+</html>
