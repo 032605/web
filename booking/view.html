@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+      <link rel="stylesheet" href="../css/style.css">
+      <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap"
+      rel="stylesheet"/>
+      <script src="../js/jquery-1.12.4.min.js"></script>
+      <script src="../js/jquery-ui.min.js"></script>
+      <script src="../js/swiper.min.js"></script>
+      
+      <link rel="stylesheet" href="../css/swiper.min.css">
+      <!-- Swiper JS -->
+      <script src="../package/swiper-bundle.min.js"></script>
+      
+  <title>sign in</title>
+</head>
+ <body>
+    <!--상단 헤더 -->
+    <div class="header">
+        <div class="logo">
+        <h1><a href="../index.html"><img src="https://globalsymbols.com/uploads/production/image/imagefile/5353/13_5353_c893595f-9bfd-4e5b-aa50-660b0a402ea2.svg" width="80px"></a></h1>
+        </div>
+    </div>
+   <!--메뉴-->
+   <div class="menu">
+    <ul>
+        <li><a href="#">회사소개</a>
+          <ul class="submenu">
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">오시는 길</a></li>
+          </ul>
+        </li>
+        <li><a href="./board.html">게시판</a>
+          <ul class="submenu">
+            <li><a href="./board.html">공지사항</a></li>
+            <li><a href="./anything.html">자유게시판</a></li>
+            <li><a href="./gallery.html">갤러리</a></li>
+          </ul>
+        </li>
+        <li><a href="../booking/list.html">장소 예약</a></li>
+        <li><a href="#">My Page</a></li>
+    </ul>
+ </div>
+    <!--body-->
+
+    <div class="content">
+    <div class="notice-wrap">
+        <div class="notice-box">
+            <h1>장소 예약 상세보기</h1>
+
+        <div class="booking-view">
+            <div class="photo-box">
+                    <div class="view-banner">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide"><img src="../img/002.jpg"></a></div>
+                          <div class="swiper-slide"><img src="../img/001.jpg"></div>
+                        </div>
+                       <!-- Add Arrows -->
+                         <div class="swiper-button-next"></div>
+                         <div class="swiper-button-prev"></div>
+                       <!-- Add Pagination -->
+                         <div class="swiper-pagination"></div>
+                       </div>
+                       <!-- 실행 Initialize Swiper -->
+                       <script>
+                         var swiper = new Swiper('.swiper-container', {
+                           navigation: {
+                             nextEl: '.swiper-button-next',
+                             prevEl: '.swiper-button-prev',
+                           },
+                           pagination: {
+                             el: '.swiper-pagination',
+                             clickable : true,
+                           },
+                           autoplay: {
+                             delay: 2500,
+                             disableOnInteraction: false,
+                           },
+                         });
+                       </script>
+                    </div>
+                
+                <div class="calendar">
+
+                    <div class="cal-hd">
+                        <span><a href="">이전 달</a></span>
+                        <span class="month"><a href="">2021.04</a></span>
+                        <span><a href="">다음 달</a></span>
+                    </div>
+
+                    <div class="cal-box">
+                        <ul>
+                            <li><a href="#"><span>일</span></a></li>
+                            <li><a href="#"><span>월</span></a></li>
+                            <li><a href="#"><span>화</span></a></li>
+                            <li><a href="#"><span>수</span></a></li>
+                            <li><a href="#"><span>목</span></a></li>
+                            <li><a href="#"><span>금</span></a></li>
+                            <li><a href="#"><span>토</span></a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#"><span class="off">28</span></a></li>
+                            <li><a href="#"><span class="off">29</span></a></li>
+                            <li><a href="#"><span class="off">30</span></a></li>
+                            <li><a href="#"><span class="off">31</span></a></li>
+                            <li><a href="#"><span>1</span></a></li>
+                            <li><a href="#"><span>2</span></a></li>
+                            <li><a href="#"><span>2</span></a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#"><span>4</span></a></li>
+                            <li><a href="#"><span>5</span></a></li>
+                            <li><a href="#"><span>6</span></a></li>
+                            <li><a href="#"><span>7</span></a></li>
+                            <li><a href="#"><span>8</span></a></li>
+                            <li><a href="#"><span>9</span></a></li>
+                            <li><a href="#"><span>10</span></a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#"><span>11</span></a></li>
+                            <li><a href="#"><span>12</span></a></li>
+                            <li><a href="#"><span>13</span></a></li>
+                            <li><a href="#"><span>14</span></a></li>
+                            <li><a href="#"><span>15</span></a></li>
+                            <li><a href="#"><span>16</span></a></li>
+                            <li><a href="#"><span>17</span></a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#"><span>18</span></a></li>
+                            <li><a href="#"><span>19</span></a></li>
+                            <li><a href="#"><span>20</span></a></li>
+                            <li><a href="#"><span class="today">21</span></a></li>
+                            <li><a href="#"><span>22</span></a></li>
+                            <li><a href="#"><span>23</span></a></li>
+                            <li><a href="#"><span>24</span></a></li>
+
+                        </ul>
+                        <ul>
+                            <li><a href="#"><span>25</span></a></li>
+                            <li><a href="#"><span>26</span></a></li>
+                            <li><a href="#"><span>27</span></a></li>
+                            <li><a href="#"><span>28</span></a></li>
+                            <li><a href="#"><span>29</span></a></li>
+                            <li><a href="#"><span>30</span></a></li>
+                            <li><a href="#"><span>31</span></a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+                <div class="view-btn">
+
+                </div>
+
+                <div class="view-detail">
+
+                </div>
+
+        </div>
+
+        </div> 
+    </div>
+    </div>   
+
+    <!--하단 정보 -->
+   <div class="footer">
+    <a href="#"><img src="https://globalsymbols.com/uploads/production/image/imagefile/5353/13_5353_c893595f-9bfd-4e5b-aa50-660b0a402ea2.svg" width="60px"></a>
+     <h1>Pizzzzza!</h1>
+     <p>주소 : 대구 동구 3D 융합센터</p>
+     <p>대표자 : 김나현</p>
+     <p>이메일 : pizzagajowa@naver.com</p>
+     <p>연락처 : 010-8282-5353</p>
+     <span>copyright(c) Light. All rights reserved.</span>
+ </div>
+
+</body>
+</html>

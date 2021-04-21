@@ -56,8 +56,8 @@ height: auto;
 .menu > ul {
     text-align: center;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    justify-content: center;
+    align-item: center;
     justify-content: space-evenly;
 }
 
@@ -76,12 +76,11 @@ height: auto;
 
 .menu > ul > li > ul.submenu{
     position: absolute;
+    display: none;
     z-index: 9;
     background-color: #fff;
     border: 3px solid rgb(255, 161, 53);
     padding: 10px;
-    display: none;
-
 }
 
 .menu > ul > li:hover ul.submenu {
@@ -156,6 +155,7 @@ height: auto;
 }
 
 .tap-con ul li {
+    padding: 0px 25px;
     overflow: hidden;
 }
 .tap-con ul li a {
@@ -163,6 +163,8 @@ height: auto;
     display: block;
     padding: 5px;
 }
+
+.tap-con ul li a:hover{text-decoration: underline; color: rgb(0, 0, 0); font-weight: bold;}
 
 .tap-con ul li a ::before{
     content: "";
@@ -310,7 +312,7 @@ height: auto;
 /* 페이지 */
 
 
-.paging ul {text-align: center; margin: 10px;}
+.paging ul {text-align: center; margin: 20px; margin-bottom: 30px;}
 .paging ul li {display: inline-block; margin: 5px 0px;}
 .paging ul li a{display: block; padding: 5px 10px; border: 2px solid rgb(255, 161, 53); background-color: #fff; color: rgb(32, 22, 11);}
 .paging ul li.on a{background-color: rgb(255, 161, 53); color: #fff; border: 2px solid rgb(255, 161, 53);} 
@@ -370,6 +372,45 @@ input[id="check-notice"] {
 .gallery-table > ul {overflow: hidden; display: flex; flex-wrap: wrap}
 .gallery-table > ul > li {width: 25%; margin-bottom: 20px;}
 .gallery-table > ul > li > div {padding: 10px;}
-.gallery-table .thum{overflow: hidden; padding-bottom: 0px;}
+.gallery-table .thum{height: 300px; overflow: hidden; padding-bottom: 0px; box-shadow: 0px 1px 10px 2px rgb(233, 233, 233); margin: 8px;}
 .gallery-table .info a{display: block; font-size: 15px;}
 .gallery-table .info span {color: #888; }
+
+/* 장소예약 */
+
+
+.booking-table > ul > li {margin-bottom: 20px; display: flex; background-color: #fff; box-shadow: 0px 1px 10px 2px rgb(233, 233, 233);}
+.booking-table > ul > li > div {padding: 10px;}
+
+.booking-table .thum{text-align: center; width: 15%;}
+.booking-table .thum a{padding: 5px; max-height: 220px; overflow: hidden;}
+.booking-table .thum img{max-height: 220px; border: 1px solid #ccc;}
+
+.booking-table .info{width: 85%;}
+.booking-table .info a{font-size: 17px; font-weight: bold;}
+.booking-table .info a:hover{text-decoration: underline; color: rgb(0, 0, 0); font-weight: bold;}
+.booking-table .info p{font-size: 15px;}
+.booking-table .info span {color: #888; }
+
+
+/* 장소예약 상세 뷰 */
+
+.booking-view > div{border: 1px solid red; padding: 20px;}
+.booking-view .photo-box > div {border:  1px solid orange; padding: 20px;}
+.booking-view .photo-box {overflow:hidden; display: flex;}
+
+.booking-view .photo-box .view-banner {width: 50%;}
+.booking-view .photo-box .calendar {width: 50%;}
+
+.cal-box ul {overflow: hidden; padding: 5px;}
+.cal-box ul li{float: left; width: 14.28%; text-align: center;}
+.cal-box ul li:first-child a span{color: #ff4c4c;}
+.cal-box ul li:last-child a span{color: #13b2f7;}
+
+.cal-box ul li span.off{color: #aaa;}
+.cal-box ul li a span.today{color: #fff; background-color:rgb(255, 161, 53); padding: 5px;}
+.cal-box ul li a span.selected{color: #fff; background-color: #000; padding: 5px;}
+.cal-box ul li a span:hover{color: #fff; background: #000; padding: 8px;}
+
+.calendar .cal-hd {text-align: center; margin: 10px;}
+.calendar .cal-hd .month{margin: 12px; font-size: 18px; font-weight: bold;}
