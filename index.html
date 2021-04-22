@@ -13,7 +13,6 @@
  
   <script src="./js/jquery-1.12.4.min.js"></script>
   <script src="./js/jquery-ui.min.js"></script>
-  <script src="./js/swiper.min.js"></script>
   
   <link rel="stylesheet" href="./css/style.css">
   <link
@@ -28,7 +27,7 @@
    <!-- 데스크탑 -->
   <link rel="stylesheet" media="screen and (min-width: 1025px)" href="/css/pc.css">
   <!-- Swiper JS -->
-  <script src="../package/swiper-bundle.min.js"></script>
+  <script src="./js/swiper.min.js"></script>
   <link rel="stylesheet" href="./css/swiper.min.css">
 </head>
  <body>
@@ -41,29 +40,28 @@
         </div>
         <div class="top_btn">
           <ul>
-
             <!-- 로그인 전 -->
-          <h3><li class="sign_in"><a href="./member/sign_in.html">로그인</a></li></h3>
-          <h3><li class="sign_up"><a href="./member/sign_up.html">회원가입</a></li></h3>
-
+          <h4><li class="sign_in"><a href="./member/sign_in.html">로그인</a></li></h4>
+          <h4><li class="sign_up"><a href="./member/sign_up.html">회원가입</a></li></h4>
+          <h4><li class="adminpage"><a href="./admin/setting.html">관리자</a></li></h4>
+          
+          <!-- 모바일 메뉴 -->
+          <li>
+            <a href="#" class="togglebtn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </a>
+          </li>
           <!-- 로그인 후 
           <li class="user_img"><img src=""></li>
           <h3><li class="sign_in"><a href="./member/sign_in.html">로그아웃</a></li></h3>
           <h3><li class="sign_up"><a href="./member/sign_up.html">회원정보 수정</a></li></h3>
           -->
-          <!-- 관리자  -->
-          <h3><li class="adminpage"><a href="./admin/setting.html">관리자</a></li></h3>
+          <!-- 관리자 
+          <h3><li class="adminpage"><a href="./admin/setting.html">관리자</a></li></h3> -->
         </div>
         </ul>
-    </div>
-
-    <!-- 모바일 메뉴 -->
-    <div class="m-menu">
-      <a href="#">
-        <span></span>
-        <span></span>
-        <span></span>
-      </a>
     </div>
 
    <!--메뉴-->
@@ -86,6 +84,30 @@
           <li><a href="./member/mypage.html">My Page</a></li>
       </ul>
    </div>
+
+   <script>
+     
+    /* 제이쿼리 버전 */
+    $('.togglebtn').click(
+      function(){
+        $(this).toggleClass('active');
+        $('.menu').toggleClass('active');
+      }
+    )
+
+    /*  바닐라 JS 버전 */
+    /*
+    const toggleBTN = document.querySelector('.togglebtn');
+    const menu = document.querySelector('.menu');
+
+    toggleBTN.addEventListener('click', () => {
+        toggleBTN.classList.toggle('active');
+        menu.classList.toggle('active');
+    });
+*/
+    
+
+  </script>
 
    <!-- 팝업창 
    <div class="popup-box">
@@ -198,4 +220,6 @@
    </div>
 
 </body>
+
+
 </html>
