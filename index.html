@@ -6,34 +6,66 @@
   <meta name="Author" content="">
   <meta name="Keywords" content="">
   <meta name="Description" content="">
-      <link rel="stylesheet" href="./css/style.css">
-      <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap"
-      rel="stylesheet"/>
-      <script src="./js/jquery-1.12.4.min.js"></script>
-      <script src="./js/jquery-ui.min.js"></script>
-      <script src="./js/swiper.min.js"></script>
-      
-      <link rel="stylesheet" href="./css/swiper.min.css">
-      <!-- Swiper JS -->
-      <script src="../package/swiper-bundle.min.js"></script>
-      
+  <!-- 반응형 웹 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, user-scalable=yes">
+
   <title>Try Pizzzzza!</title>
+ 
+  <script src="./js/jquery-1.12.4.min.js"></script>
+  <script src="./js/jquery-ui.min.js"></script>
+  <script src="./js/swiper.min.js"></script>
+  
+  <link rel="stylesheet" href="./css/style.css">
+  <link
+  href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap"
+  rel="stylesheet"/>
+  <!-- 모바일 -->
+  <link rel="stylesheet" media="screen and (max-width: 480px)" href="/css/480.css">
+   <!-- 태블릿 세로-->
+  <link rel="stylesheet" media="screen and (min-width: 481px) and (max-width: 720px)" href="/css/720.css">
+  <!-- 태블릿 가로-->
+  <link rel="stylesheet" media="screen and (min-width: 721px) and (max-width: 1024px)" href="/css/1024.css">
+   <!-- 데스크탑 -->
+  <link rel="stylesheet" media="screen and (min-width: 1025px)" href="/css/pc.css">
+  <!-- Swiper JS -->
+  <script src="../package/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="./css/swiper.min.css">
 </head>
  <body>
-   <!--상단 헤더 -->
+
+   <!--상단 헤더 
+  <? php include ('header.php')-->
    <div class="header">
         <div class="logo">
           <h1><a href="./index.html"><img src="https://globalsymbols.com/uploads/production/image/imagefile/5353/13_5353_c893595f-9bfd-4e5b-aa50-660b0a402ea2.svg" width="80px"></a></h1>
         </div>
         <div class="top_btn">
           <ul>
-            <h3><li class="adminpage"><a href="./admin/setting.html">관리자</a></li></h3>
-          <h3><li class="sign_in"><a href="./memb er/sign_in.html">로그인</a></li></h3>
+
+            <!-- 로그인 전 -->
+          <h3><li class="sign_in"><a href="./member/sign_in.html">로그인</a></li></h3>
           <h3><li class="sign_up"><a href="./member/sign_up.html">회원가입</a></li></h3>
-          </ul>
+
+          <!-- 로그인 후 
+          <li class="user_img"><img src=""></li>
+          <h3><li class="sign_in"><a href="./member/sign_in.html">로그아웃</a></li></h3>
+          <h3><li class="sign_up"><a href="./member/sign_up.html">회원정보 수정</a></li></h3>
+          -->
+          <!-- 관리자  -->
+          <h3><li class="adminpage"><a href="./admin/setting.html">관리자</a></li></h3>
         </div>
+        </ul>
     </div>
+
+    <!-- 모바일 메뉴 -->
+    <div class="m-menu">
+      <a href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+    </div>
+
    <!--메뉴-->
    <div class="menu">
       <ul>
@@ -54,6 +86,18 @@
           <li><a href="./member/mypage.html">My Page</a></li>
       </ul>
    </div>
+
+   <!-- 팝업창 
+   <div class="popup-box">
+    <img src="https://i.pinimg.com/564x/3b/e4/36/3be436f552cf0c9f339245c0a838d9a0.jpg" alt="">
+    <div class="popup-btn">
+      <ul>
+        <li><input type="checkbox"><label for="">하루 종일 안보기</label></li>
+        <li><a href="#">X</a></li>
+      </ul>
+    </div>
+   </div>
+-->
 
     <!--상단배너-->
       <!-- Swiper -->
@@ -109,10 +153,12 @@
     <div class="right-banner">
         <div class="swiper-container r-slide">
           <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="https://image.freepik.com/free-psd/banner-template-for-new-cheesy-pizza-flavor_23-2148805549.jpg"></div>
-            <div class="swiper-slide"><img src="https://image.freepik.com/free-psd/horizontal-banner-template-for-new-cheesy-pizza-flavor_23-2148805551.jpg"></div>
-            <div class="swiper-slide"><img src="https://image.freepik.com/free-psd/horizontal-banner-for-new-cheesy-pizza-flavor_23-2148805550.jpg"></div>
-            <div class="swiper-slide"><img src="https://image.freepik.com/free-psd/horizontal-banner-template-for-new-cheesy-pizza-flavor_23-2148805548.jpg"></div>
+            <div class="swiper-slide"><img src="https://i.pinimg.com/originals/b3/eb/d5/b3ebd5273be09856df1b06a35012d100.gif"></div>
+            <div class="swiper-slide"><img src="https://i.pinimg.com/originals/68/37/c0/6837c0aa8fbcc59e4f292df0fadb5135.gif"></div>
+            <div class="swiper-slide"><img src="https://i.pinimg.com/564x/8a/d1/66/8ad166de715d78b24a61388c0210fc13.jpg"></div> 
+            <div class="swiper-slide"><img src="https://i.pinimg.com/564x/e4/cc/55/e4cc55b9a51968a1bff050a0d7e3776c.jpg"></div>
+            <div class="swiper-slide"><img src="https://i.pinimg.com/564x/65/73/4d/65734def231304128c04553a87054bd8.jpg"></div>
+            <div class="swiper-slide"><img src="https://i.pinimg.com/564x/40/59/f1/4059f190f3c8c1eee99e313721ee1c6b.jpg"></div>
           </div>
         <!-- Add Arrows -->
           <div class="swiper-button-next swiper-button-white"></div>
