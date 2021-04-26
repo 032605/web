@@ -1,7 +1,4 @@
-:root {
-    --main-point-color: rgb(255, 161, 53);
-  }
-  
+ 
   .header{background: rgb(255, 42, 42); overflow: hidden;}
   
   .header .logo img{ width: 60px;}

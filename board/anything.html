@@ -2,51 +2,123 @@
 <html lang="ko">
  <head>
   <meta charset="UTF-8">
-  <meta name="Generator" content="EditPlus®">
+  <meta name="Generator" content="EditPlus">
   <meta name="Author" content="">
   <meta name="Keywords" content="">
   <meta name="Description" content="">
-      <link rel="stylesheet" href="../css/style.css">
-      <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap"
-      rel="stylesheet"/>
-      <script src="../js/jquery-1.12.4.min.js"></script>
-      <script src="../js/jquery-ui.min.js"></script>
-      <script src="../js/swiper.min.js"></script>
-      
-      <link rel="stylesheet" href="../css/swiper.min.css">
-      <!-- Swiper JS -->
-      <script src="../package/swiper-bundle.min.js"></script>
-      
-  <title>[pizzza!] 자유게시판</title>
+  <!-- 반응형 (기기 해상도별)-->
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0, user-scalable=yes">
+
+  <title>[try pizza!]free board</title>
+
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script src="../js/jquery-ui.min.js"></script>
+
+<script src="../js/swiper.min.js"></script>
+<link rel="stylesheet" href="../js/swiper.min.css">
+
+<link rel="stylesheet" href="../css/style.css">
+  <link
+  href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap"
+  rel="stylesheet"/>
+
+
+<!-- 모바일 -->
+<link rel="stylesheet" media="screen and (max-width: 480px)" href="../css/480.css">
+
+<!-- 태블릿 세로--> 
+<link rel="stylesheet" media="screen and (min-width: 481px) and (max-width: 720px)" href="../css/720.css">
+
+<!-- 태블릿 가로-->
+<link rel="stylesheet" media="screen and (min-width: 721px) and (max-width: 1024px)" href="../css/1024.css">
+<!-- PC -->
+<link rel="stylesheet" media="screen and (min-width: 1025px)" href="../css/pc.css">
+
+
 </head>
+
+
  <body>
     <!--상단 헤더 -->
-    <div class="header">
+
+   <div class="header">
         <div class="logo">
-        <h1><a href="../index.html"><img src="https://globalsymbols.com/uploads/production/image/imagefile/5353/13_5353_c893595f-9bfd-4e5b-aa50-660b0a402ea2.svg" width="80px"></a></h1>
+          <h1><a href="../index.html"><img src="https://globalsymbols.com/uploads/production/image/imagefile/5353/13_5353_c893595f-9bfd-4e5b-aa50-660b0a402ea2.svg" width="80px"></a></h1>
         </div>
-    </div>
+        <div class="top_btn">
+          <ul>
+            <!-- 로그인 전 -->
+          <h4><li class="sign_in"><a href="../member/sign_in.html">로그인</a></li></h4>
+          <h4><li class="sign_up"><a href="../member/sign_up.html">회원가입</a></li></h4>
+          <h4><li class="adminpage"><a href="../admin/setting.html">관리자</a></li></h4>
+   
+
+          <!-- 모바일 메뉴 -->
+          <li>
+            <a href="#" class="togglebtn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </a>
+          </li>
+          <!-- 로그인 후 
+          <li class="user_img"><img src=""></li>
+          <h3><li class="sign_in"><a href="./member/sign_in.html">로그아웃</a></li></h3>
+          <h3><li class="sign_up"><a href="./member/sign_up.html">회원정보 수정</a></li></h3>
+          -->
+          <!-- 관리자 
+          <h3><li class="adminpage"><a href="./admin/setting.html">관리자</a></li></h3> -->
+        </ul>
+		</div>
+  </div>
+
+
+
    <!--메뉴-->
    <div class="menu">
     <ul>
         <li><a href="#">회사소개</a>
           <ul class="submenu">
-            <li><a href="#">회사소개</a></li>
-            <li><a href="#">오시는 길</a></li>
+            <li><a href="../info/intro.html">회사소개</a></li>
+            <li><a href="../info/map.html">오시는 길</a></li>
           </ul>
         </li>
         <li><a href="#">게시판</a>
           <ul class="submenu">
-            <li><a href="./board.html">공지사항</a></li>
-            <li><a href="./board.html">자유게시판</a></li>
-            <li><a href="./gallery.html">갤러리</a></li>
+            <li><a href="../board/board.html">공지사항</a></li>
+            <li><a href="../board/anything.html">자유게시판</a></li>
+            <li><a href="../board/gallery.html">갤러리</a></li>
           </ul>
         </li>
         <li><a href="../booking/list.html">장소 예약</a></li>
         <li><a href="../member/mypage.html">My Page</a></li>
     </ul>
  </div>
+
+
+    
+<script>
+     
+    /* 제이쿼리 버전 
+    $('.togglebtn').click(
+      function(){
+        $(this).toggleClass('active');
+        $('.menu').toggleClass('active');
+      }
+    )
+*/
+    /*  바닐라 JS 버전 */
+    
+    const toggleBTN = document.querySelector('.togglebtn');
+    const menu = document.querySelector('.menu');
+
+    toggleBTN.addEventListener('click', () => {
+        toggleBTN.classList.toggle('active');
+        menu.classList.toggle('active');
+    });
+
+</script>
+
     <!--body-->
 
     <div class="content">

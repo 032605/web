@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <!-- 반응형 (기기 해상도별)-->
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0, user-scalable=yes">
+
+  <title>[Try Pizza!]오시는 길</title>
+
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script src="../js/jquery-ui.min.js"></script>
+
+<script src="../js/swiper.min.js"></script>
+<link rel="stylesheet" href="../js/swiper.min.css">
+
+<link rel="stylesheet" href="../css/style.css">
+  <link
+  href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap"
+  rel="stylesheet"/>
+
+
+<!-- 모바일 -->
+<link rel="stylesheet" media="screen and (max-width: 480px)" href="../css/480.css">
+
+<!-- 태블릿 세로--> 
+<link rel="stylesheet" media="screen and (min-width: 481px) and (max-width: 720px)" href="../css/720.css">
+
+<!-- 태블릿 가로-->
+<link rel="stylesheet" media="screen and (min-width: 721px) and (max-width: 1024px)" href="../css/1024.css">
+<!-- PC -->
+<link rel="stylesheet" media="screen and (min-width: 1025px)" href="../css/pc.css">
+
+
+</head>
+
+
+ <body>
+    <!--상단 헤더 -->
+
+   <div class="header">
+        <div class="logo">
+          <h1><a href="../index.html"><img src="https://globalsymbols.com/uploads/production/image/imagefile/5353/13_5353_c893595f-9bfd-4e5b-aa50-660b0a402ea2.svg" width="80px"></a></h1>
+        </div>
+        <div class="top_btn">
+          <ul>
+            <!-- 로그인 전 -->
+          <h4><li class="sign_in"><a href="../member/sign_in.html">로그인</a></li></h4>
+          <h4><li class="sign_up"><a href="../member/sign_up.html">회원가입</a></li></h4>
+          <h4><li class="adminpage"><a href="../admin/setting.html">관리자</a></li></h4>
+   
+
+          <!-- 모바일 메뉴 -->
+          <li>
+            <a href="#" class="togglebtn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </a>
+          </li>
+          <!-- 로그인 후 
+          <li class="user_img"><img src=""></li>
+          <h3><li class="sign_in"><a href="./member/sign_in.html">로그아웃</a></li></h3>
+          <h3><li class="sign_up"><a href="./member/sign_up.html">회원정보 수정</a></li></h3>
+          -->
+          <!-- 관리자 
+          <h3><li class="adminpage"><a href="./admin/setting.html">관리자</a></li></h3> -->
+        </ul>
+		</div>
+  </div>
+
+
+
+   <!--메뉴-->
+   <div class="menu">
+    <ul>
+        <li><a href="#">회사소개</a>
+          <ul class="submenu">
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">오시는 길</a></li>
+          </ul>
+        </li>
+        <li><a href="#">게시판</a>
+          <ul class="submenu">
+            <li><a href="../board/board.html">공지사항</a></li>
+            <li><a href="../board/anything.html">자유게시판</a></li>
+            <li><a href="../board/gallery.html">갤러리</a></li>
+          </ul>
+        </li>
+        <li><a href="../booking/list.html">장소 예약</a></li>
+        <li><a href="../member/mypage.html">My Page</a></li>
+    </ul>
+ </div>
+
+
+    
+<script>
+     
+    /* 제이쿼리 버전 
+    $('.togglebtn').click(
+      function(){
+        $(this).toggleClass('active');
+        $('.menu').toggleClass('active');
+      }
+    )
+*/
+    /*  바닐라 JS 버전 */
+    
+    const toggleBTN = document.querySelector('.togglebtn');
+    const menu = document.querySelector('.menu');
+
+    toggleBTN.addEventListener('click', () => {
+        toggleBTN.classList.toggle('active');
+        menu.classList.toggle('active');
+    });
+
+</script>
+
+<style>
+.section_contact{padding-top: 75px;padding-bottom: 120px;max-width: 980px;margin: 0 auto;}
+.section_contact h1,
+.section_contact h3{position: relative;font-size: 36px;line-height: 40px;padding-bottom: 25px;text-align: center;font-weight: 500;text-transform:capitalize;}
+.section_contact h1:after,
+.section_contact h3:after{content: '';position: absolute;left: 50%;bottom:0;width: 30px;margin-left: -15px;height: 1px;background: #b2b2b2;}
+.section_contact >p{text-align: center;padding: 25px 0 0;font-size: 15px;}
+.section_contact .map_area{position: relative;border:1px solid #d9d9d9;margin-top: 110px;}
+.section_contact .map_area >img{position: relative;z-index: 100}
+.section_contact .map_area #google_map{position: absolute;top:0;right:0;bottom:-1px;left:0;width: 100%;height: 100%;}
+.section_contact .map_area #naver_map{position: absolute !important;top:0;right:0;bottom:0;left:0;width: 100%;height: 100%;}
+.section_contact .map_area.google #google_map{z-index: 101;}
+.section_contact .map_area.naver #naver_map{z-index: 101;}
+/*#contents .about_content .section_contact .map_area .tab_map{position: absolute;bottom:0;left:0;right:0;text-align: center;max-width: 650px;margin: 0 auto;z-index: 101}*/
+.section_contact .map_area .tab_map {position:absolute; bottom: 0; left:0; width:100%; text-align: center;z-index: 101}
+.section_contact .map_area .tab_map ul {max-width: 650px;margin: 0 auto;}
+.section_contact .map_area .tab_map ul li{float: left;width: 50%;}
+.section_contact .map_area .tab_map ul li a{display: block;height: 43px;line-height: 45px;background: #efefef;border-top: 1px solid #dbdbdb;border-right: 1px solid #dbdbdb;font-size: 14px;color: #666; font-weight: 700;}
+.section_contact .map_area .tab_map ul li a img {vertical-align: middle; position:relative; top:-2px; margin-right:15px;}
+.section_contact .map_area .tab_map ul li a.active
+,.section_contact .map_area .tab_map ul li a:hover{background: rgb(255, 161, 53);color: #fff;border-color:rgb(255, 161, 53) }
+.section_contact .map_area .tab_map ul li:first-child a{border-right: 1px solid #dbdbdb; border-left: 1px solid #dbdbdb;}
+.section_contact .contact_list ul {margin-top:16px;}
+.section_contact .contact_list ul li{overflow: hidden;padding: 50px 0;border-top: 1px solid #dbdbdb;}
+.section_contact .contact_list ul li:first-child{border-top: 0;}
+.section_contact .contact_list ul li .tit{float: left;width: 210px;font-size: 26px;line-height: 36px;color: #333333; letter-spacing: -0.6px;}
+.section_contact .contact_list ul li .desc{float: left;text-align: left;font-size: 14px;line-height: 22px;}
+.section_contact .contact_list ul li .desc .item{overflow: hidden;padding-top: 40px;}
+.section_contact .contact_list ul li .desc .item:first-child{padding-top: 0;}
+.section_contact .contact_list ul li .desc .item .ico{float: left;padding-right: 15px;min-width: 45px;}
+.section_contact .contact_list ul li .desc .item .text{float: left;line-height: 38px;overflow: hidden}
+.section_contact .contact_list ul li .desc .item .text em{font-weight: 700;width: 120px;display: block;float: left}
+.section_contact .contact_list ul li .desc .item .text .dl_wrap{float: left}
+.section_contact .contact_list ul li .desc .item .text .dl_wrap dl{line-height: 20px;padding: 20px 0;border-top: 1px solid #dbdbdb;overflow: hidden}
+.section_contact .contact_list ul li .desc .item .text .dl_wrap dl:first-child{padding-top: 8px;border-top:0}
+.section_contact .contact_list ul li .desc .item .text .dl_wrap dl:last-child {padding-bottom: 14px;}
+.section_contact .contact_list ul li .desc .item .text .dl_wrap dl dt{float: left;width: 108px;}
+.section_contact .contact_list ul li .desc .item .text .dl_wrap dl dd{float: left}
+.section_contact .contact_list ul li .desc .item.multiline{float: left;padding-right: 60px;padding-top: 0;}
+.section_contact .contact_list ul li .desc .item.multiline .text{line-height: 20px;}
+.section_contact .contact_list ul li .desc .item.multiline .text em{float: none;width: 100%;}
+.section_contact .contact_list ul li .desc table{text-align: center;color: #444444;padding: 35px 0 25px;  display: block;}
+.section_contact .contact_list ul li .desc table tr{border-bottom: 1px solid #dbdbdb;}
+.section_contact .contact_list ul li .desc table th{padding: 10px 5px}
+.section_contact .contact_list ul li .desc table td{padding: 10px 0}
+.section_contact .contact_list ul li .desc .alert{color: #666;font-size: 12px;line-height: 20px;font-weight: 500}
+.section_contact .contact_list ul li .desc .link_detail {color: #8c6fb2; border-bottom: 1px solid #8c6fb2;}
+.section_contact .contact_list ul li .desc .link_detail:hover {color: rgb(255, 161, 53);}
+</style>
+    <div class="content">
+    <div class="notice-wrap">
+        <div class="notice-box">
+
+            <div class="section_contact">
+                <h1>오시는 길</h1>
+                <p>더 플라자로 오시는 길을 소개합니다.</p>
+                <div class="map_area">
+    
+                    <div id="naver_map"></div>
+                    <div id="google_map"></div>
+                    <img src="/_resource/images/about/contact_map.jpg" alt="더 플라자로 오시는 길"/>
+                    <div class="tab_map">
+                        <ul>
+                            <li><a href="javascript:void(0)" data-map="naver" class="mot2"><img src="/_resource/images/about/ico_na.png" alt=""/>네이버 지도</a></li>
+                            <li><a href="javascript:void(0)" data-map="google" class="mot2"><img src="/_resource/images/about/ico_ga.png" alt=""/>구글 지도</a></li>
+                        </ul>
+    
+                    </div>
+                </div>
+    
+                <div class="contact_list">
+                    <ul>
+                        <li>
+                            <div class="tit">주소 & 연락처</div>
+                            <div class="desc">
+                                <div class="item multiline">
+                                    <div class="ico"><img src="/_resource/images/about/ico_addr.png" alt=""/></div>
+                                    <div class="text"><em>주소</em>서울특별시 중구 소공로 119 (우: 04525)</div>
+                                </div>
+                                <div class="item multiline">
+                                    <div class="ico"><img src="/_resource/images/about/ico_phone.png" alt=""/></div>
+                                    <div class="text"><em>전화</em>02.771.2200</div>
+                                </div>
+                                <div class="item multiline">
+                                    <div class="ico"><img src="/_resource/images/about/ico_fax.png" alt=""/></div>
+                                    <div class="text"><em>팩스</em>02.755.8897</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tit">교통편</div>
+                            <div class="desc">
+                                <div class="item">
+                                    <div class="ico"><img src="/_resource/images/about/ico_metro.png" alt=""/></div>
+                                    <div class="text"><em>지하철 이용시</em>시청역(1호선/2호선)에서 하차, 6번 출구에서 도보 1-2분 거리</div>
+                                </div>
+                                <div class="item">
+                                    <div class="ico"><img src="/_resource/images/about/ico_bus.png" alt=""/></div>
+                                    <div class="text"><em>버스 이용시</em>시청 앞 정류소 하차</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tit">공항에서<br>오실 때</div>
+                            <div class="desc">
+                                <div class="item">
+                                    <div class="ico"><img src="/_resource/images/about/ico_airport.png" alt=""/></div>
+                                    <div class="text">
+                                        <div class="text"><em style="line-height:20px">인천국제공항</em></div>								
+                                        <div class="dl_wrap">
+                                            <dl>
+                                                <dt>KAL 리무진<br>(6701번)</dt>
+                                                <dd>요금: 16,000원(편도)<br>
+                                                    소요시간: T1 약 100 - 110분 / T2 약 80 -90분<br>
+                                                    운행시간: 04:53 - 22:50 (공항 → 호텔) / 04:30 - 18:35 (호텔 → 공항)<br>
+                                                    <a href="https://www.kallimousine.com/line/station.php?Txt_bnumber=1#on_scroll" target="_blank" title="새 창으로 열림" class="link_detail">운행시간 자세히 보기</a></dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>지하철</dt>
+                                                <dd>노선: 공항철도 탑승 → 서울역 1호선 환승 → 시청역 하차<br>
+                                                    소요시간: T1 약 70분 / T2 약 80분</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>택시</dt>
+                                                <dd>요금: 약 75,000원(일반) / 약 95,000원(모범)<br>
+                                                    소요시간: 약 60 - 80분</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="ico"><img src="/_resource/images/about/ico_airport.png" alt=""/></div>
+                                    <div class="text">
+                                        <em>김포국제공항</em>
+                                        <div class="dl_wrap">
+                                            <dl>
+                                                <dt>공항 리무진<br>(6021번)</dt>
+                                                <dd>요금: 7,000원(편도)<br>
+                                                    소요시간: 약 60분 *명동 이비스 호텔 앞에서 하차<br>
+                                                    운행시간: 05:00 - 23:10 (공항 → 이비스) / 05:45 - 20:40 (이비스 → 공항)</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>지하철</dt>
+                                                <dd>노선: 공항철도 탑승 → 서울역 1호선 환승 → 시청역 하차<br>
+                                                    소요시간: 약 35분</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>택시</dt>
+                                                <dd>요금: 약 35,000원(일반) / 약 45,000원(모범)<br>
+                                                    소요시간: 약 30 - 40분</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        
+    
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+<!-- footer -->
+<!--하단 정보 -->
+<div class="footer">
+    <a href="#"><img src="https://globalsymbols.com/uploads/production/image/imagefile/5353/13_5353_c893595f-9bfd-4e5b-aa50-660b0a402ea2.svg" width="60px"></a>
+     <h1>Pizzzzza!</h1>
+     <p>주소 : 대구 동구 3D 융합센터</p>
+     <p>대표자 : 김나현</p>
+     <p>이메일 : pizzagajowa@naver.com</p>
+     <p>연락처 : 010-8282-5353</p>
+     <span>copyright(c) Light. All rights reserved.</span>
+ </div>
+
+</body>
+</html>
