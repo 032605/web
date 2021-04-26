@@ -66,37 +66,37 @@
 
    <!--메뉴-->
    <div class="menu">
-      <ul>
-          <li><a href="#">회사소개</a>
-            <ul class="submenu">
-              <li><a href="#">회사소개</a></li>
+    <ul>
+        <li><a href="#">회사소개</a>
+          <ul class="submenu">
+              <li><a href="./info/intro.html">회사소개</a></li>
               <li><a href="#">오시는 길</a></li>
-            </ul>
-          </li>
-          <li><a href="#">게시판</a>
-            <ul class="submenu">
+          </ul>
+        </li>
+        <li><a href="#">게시판</a>
+          <ul class="submenu">
               <li><a href="./board/board.html">공지사항</a></li>
               <li><a href="./board/anything.html">자유게시판</a></li>
               <li><a href="./board/gallery.html">갤러리</a></li>
-            </ul>
-          </li>
-          <li><a href="./booking/list.html">장소 예약</a></li>
-          <li><a href="./member/mypage.html">My Page</a></li>
-      </ul>
-   </div>
+          </ul>
+        </li>
+        <li><a href="./booking/list.html">장소 예약</a></li>
+        <li><a href="./member/mypage.html">My Page</a></li>
+    </ul>
+ </div>
 
    <script>
      
-    /* 제이쿼리 버전 */
+    /* 제이쿼리 버전 
     $('.togglebtn').click(
       function(){
         $(this).toggleClass('active');
         $('.menu').toggleClass('active');
       }
     )
-
+*/
     /*  바닐라 JS 버전 */
-    /*
+    
     const toggleBTN = document.querySelector('.togglebtn');
     const menu = document.querySelector('.menu');
 
@@ -104,8 +104,6 @@
         toggleBTN.classList.toggle('active');
         menu.classList.toggle('active');
     });
-*/
-    
 
   </script>
 
