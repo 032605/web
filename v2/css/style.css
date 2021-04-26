@@ -1,6 +1,6 @@
 /* 초기화 */
 html {overflow-y:scroll}
-body {margin:0;padding:0;font-size:1em; font-family:"Noto Sans KR", sans-serif; background:#f5f5f5;}
+body {margin:0;padding:0;font-size:1em; font-family:"Noto Sans KR", sans-serif;}
 html, h1, h2, h3, h4, h5, h6, form, fieldset, img {margin:0;padding:0;border:0}
 h1, h2, h3, h4, h5, h6 {font-size:17px; font-family:"Noto Sans KR", sans-serif;}
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block}
@@ -34,10 +34,10 @@ body {
 img {
     max-width: 100%;
     height: auto;
-    width: auto\9;
+    width: auto;
 }
 
-.header {background: #fff; border-bottom: 1px solid #ccc; margin:0px}
+.header {position: fixed; width: 100%; background: #fff; border-bottom: 1px solid #ccc; margin:0px; box-shadow: 0px 1px 10px 0px rgb(54, 54, 54); z-index: 9999;}
 .header h1 a img{max-width:150px; max-height:50px;}
 
 .header .header-box{overflow:hidden; display:flex; justify-content:space-between; align-items:center; padding: 8px 12px;}
@@ -46,7 +46,11 @@ img {
 .header .header-box .gnb li a:hover{color: orange;}
 .header .header-box .tnb li{padding: 4px 4px;}
 
-.about {text-align: center; height: 1000px; 
+/* 본문 */
+.skills, .projects, .contact{max-width:1200px; margin: 0 auto; padding-bottom: 100px;}
+
+
+.about {text-align: center; height: 1200px; 
         background: url('../img/Toronto.jpg'); background-size: cover;
         /*background-position: center;
          배경 사진의 위치 좌우상하*/
@@ -58,11 +62,36 @@ img {
 .about .myface {border: 2px solid orange; background-color: rgb(255, 251, 243); border-radius: 50%; width: 10%; text-align: center; padding: 30px;}
 
 
-.numbers-wrap{max-width: 1000px; display: block; margin: 0 auto; padding-bottom: 30px;}
+/* 설치 현황 */
+.numbers-wrap{background: #fff; display:padding-bottom: 30px;}
 .numbers{text-align: center;}
-.numbers > h2{font-size: 45px; color: rgb(48, 48, 48);}
-.numbers > p{font-size: 20px; color: rgb(97, 97, 97);}
+.numbers > h2{font-size: 30px; color: rgb(48, 48, 48);}
+.numbers > p{font-size: 20px; color: #666;}
 .num-data ul{display: flex; text-align: center; flex-wrap: wrap; margin-top: 40px;}
-.num-data ul li{margin: 0px 40px;}
-.num-data ul li p{font-size: 60px; color: rgb(48, 48, 48); margin-bottom: 10px;}
-.num-data ul li span{color: rgb(97, 97, 97);}
+.num-data ul li{margin: 0px 80px;}
+.num-data ul li p{font-size: 50px; color: rgb(48, 48, 48); margin-bottom: 10px; border-bottom: 1px solid #e1e1e1; padding-bottom: 10px;}
+.numbers ul li p i{font-size:15px; font-style:normal; color: #888;}
+.num-data ul li span{color: #888}
+
+/* 슬라이더 */
+.slide-banner{background: #fff; }
+.slide-banner .swiper-slide{max-height:400px; overflow: hidden;}
+.slide-banner .swiper-slide img{width: 100%;}
+
+/* 갤러리 */
+.main-gallery ul{overflow: hidden; display: flex; flex-wrap: wrap}
+.main-gallery ul li{width: 33.33%; padding: 5px;}
+.main-gallery li > div{padding: 5px; border: 1px solid #e1e1e1;}
+.main-gallery li > div .thum{}
+.main-gallery li > div .info{text-align: center;}
+.main-gallery li > div .info h3{}
+.main-gallery li > div .info p{color:#888; margin: 10px 0; }
+.main-gallery li > div .info span{display: inline-block;
+width: 30px; height: 30px; border: 1px solid #ccc; border-radius:50%;
+line-height:28px;}
+
+.main-gallery li > div .info span{transition: all 0.3s; overflow: hidden;}
+.main-gallery li > div .info span u{display: none;}
+.main-gallery li:hover > div .info span{width: 120px; border-radius: 15px; background: orange; color: #fff; border: 0;}
+.main-gallery li:hover > div .info span u{display: inline-block;}
+
