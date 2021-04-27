@@ -43,12 +43,15 @@ img {
 .header .header-box{overflow:hidden; display:flex; justify-content:space-between; align-items:center; padding: 8px 12px;}
 .header .header-box .gnb, .header .header-box .tnb{display:flex;}
 .header .header-box .gnb li{padding: 8px 12px;}
-.header .header-box .gnb li a:hover{color: orange;}
+.header .header-box .gnb li a{color: #888;}
+.header .header-box .gnb li a:hover{color: #071633;}
 .header .header-box .tnb li{padding: 4px 4px;}
 
 /* 본문 */
-.skills, .projects, .contact{max-width:1200px; margin: 0 auto; padding-bottom: 100px;}
-
+.skills, .projects, .contact{max-width:1200px; margin: 0 auto; padding-bottom: 100px; padding-top: 100px;}
+.skills > a, .projects > a, .contact > a{position: relative;font-size: 36px;line-height: 40px;padding-bottom: 10px;text-align: center;font-weight: 500;text-transform:capitalize; }
+.skills > a::after, .projects > a:after, .contact > a:after{content: '';position: absolute;left: 10%;bottom:0;width: 80%;height: 3px; background: #071633;} 
+.numbers-wrap, .slide-banner, .main-gallery-wrap{margin-top: 50px;}
 
 .about {text-align: center; height: 1200px; 
         background: url('../img/Toronto.jpg'); background-size: cover;
@@ -59,7 +62,7 @@ img {
         
 .about h2{font-size: 40px; color: #fff; padding-top: 250px; padding-bottom: 10px;}
 .about p{font-size: 25px; color: #ccc;}
-.about .myface {border: 2px solid orange; background-color: rgb(255, 251, 243); border-radius: 50%; width: 10%; text-align: center; padding: 30px;}
+.about .myface {border: 2px solid#071633; background-color: rgb(255, 251, 243); border-radius: 50%; width: 10%; text-align: center; padding: 30px;}
 
 
 /* 설치 현황 */
@@ -92,6 +95,14 @@ line-height:28px;}
 
 .main-gallery li > div .info span{transition: all 0.3s; overflow: hidden;}
 .main-gallery li > div .info span u{display: none;}
-.main-gallery li:hover > div .info span{width: 120px; border-radius: 15px; background: orange; color: #fff; border: 0;}
+.main-gallery li:hover > div .info span{width: 120px; border-radius: 15px; background: #071633; color: #fff; border: 0;}
 .main-gallery li:hover > div .info span u{display: inline-block;}
 
+.footer{}
+.footer > div{ padding: 10px; background: #071633; overflow: hidden; }
+.footer > div > div{float:left;}
+.footer > div > div.f-logo{padding: 10px; margin: 10px;}
+.footer > div > div.f-logo h1 a{color: #fff;}
+.footer > div > div.f-logo h1 a img{max-width:150px; max-height:40px;}
+.footer > div > div.f-copy{ padding: 10px; margin: 20px;
+color: #fff;}

@@ -609,3 +609,16 @@
   .mypage-table ul li > div.date {width: 10%;}
   .mypage-table ul li > div.manage {width: 10%;}
   
+  
+  @font-face {
+    font-family: 'UhBeeSe_hyun';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeSe_hyun.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+.ele {
+position: fixed; top: 40rem; right: 3rem; cursor: pointer; font-family: 'UhBeeSe_hyun'; text-align:center;
+} 
+
+body > div.ele > a > img{ width: 80px;}
