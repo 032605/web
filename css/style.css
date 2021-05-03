@@ -421,7 +421,7 @@
   .booking-table .info a{font-size: 17px;}
   .booking-table .info p{font-size: 15px;}
   .booking-table .info span {color: #888; }
-  .booking-table .table-bd li:hover .info a{font-weight: bold; text-decoration: underline; color: rgb(255, 161, 53); font-weight: bold;}
+  .booking-table .table-bd li:hover .info a{font-weight: bold; text-decoration: underline; color: rgb(255, 161, 53);}
   
   
   /* 장소예약 상세 뷰 */
