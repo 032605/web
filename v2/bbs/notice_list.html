@@ -1,0 +1,82 @@
+<!-- 상단 헤더 불러오기 -->
+<?php include('../sub_header.php');?>
+
+
+<br>
+<br>
+<br>
+	
+	<div class="snb-wrap">
+		<div>
+			<ul>
+				<li class="on"><a href="./notice_list.html"><span>공지사항</span></a></li>
+				<li><a href="./free_list.html"><span>자유게시판</span></a></li>
+				<li><a href="./gallery_list.html"><span>갤러리</span></a></li>
+			</ul>		
+		</div>
+	</div>
+	
+
+	<div class="notice-wrap">
+		
+		<div class="serch-box">
+			<ul>
+				<input type="text" name="" id="">
+				<li class="go-serch">검색</li>
+		</div>
+		<div class="notice-box">	
+			<ul>
+				<div class="notice-title">
+					<li>
+						<div class="no">번호</div>
+						<div class="subject">제목</div>
+						<div class="writer">글쓴이</div>
+						<div class="date">등록일</div>
+					</li>
+				</div>
+
+				<div class="notice-list">
+					<li>
+						<div class="no">3</div>
+						<div class="subject"><a href="./notice_view.html"> 공지사항입니다.</a></div>
+						<div class="writer">글쓴이</div>
+						<div class="date">2021.04.20</div>
+					</li>
+					<li>
+						<div class="no">2</div>
+						<div class="subject">공지사항입니다</div>
+						<div class="writer">글쓴이</div>
+						<div class="date">2021.04.20</div>
+					</li>
+					<li>
+						<div class="no">1</div>
+						<div class="subject">공지사항입니다</div>
+						<div class="writer">글쓴이</div>
+						<div class="date">2021.04.20</div>
+					</li>
+				</div>
+			</ul>
+		</div>
+
+		<div class="paging">
+			<ul>
+				<li>처음으로</li>
+				<li>이전</li>
+				<li class="on">1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>다음</li>
+				<li>마지막</li>
+			</ul>
+		</div>
+	
+	
+		<div class="write-btn">
+			<a href="./notice_write.html">글쓰기</a>
+		</div>
+	</div>
+
+
+
+<!-- 하단 정보 불러오기 -->
+<?php include('../sub_footer.php');?>
